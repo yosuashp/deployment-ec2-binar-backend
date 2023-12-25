@@ -34,3 +34,4 @@ jobs:
         npm run build:sahat
         npm run cover
         npm run lint:scripts
+        npm run start
