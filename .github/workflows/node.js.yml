@@ -25,13 +25,16 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run :
+    - run:
+    name: Build and Test
+      command: |
         touch .env
-        echo "${{ secrets.PROD_ENV_FILE }}"
+        echo "${{ secrets.PROD_ENV_FILE }}" > .env
         sudo apt-get -y update
         npm install
-        npm build:sahat
-        npm cover
+        npm run build:sahat
+        npm run cover
         npm run lint:scripts
+
 
         
