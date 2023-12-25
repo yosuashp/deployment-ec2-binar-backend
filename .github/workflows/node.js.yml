@@ -15,7 +15,6 @@ jobs:
     strategy:
       matrix:
         node-version: [18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
     - uses: actions/checkout@v3
@@ -25,6 +24,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
+    - name: Install PM2
+      run: npm install -g pm2
     - name: Build and Test
       run: |
         touch .env
@@ -34,4 +35,6 @@ jobs:
         npm run build:sahat
         npm run cover
         npm run lint:scripts
-    - run: pm2 restart BackendAPI
+    - name: Restart PM2
+      run: pm2 restart BackendAPI
+
