@@ -34,12 +34,13 @@ jobs:
         npm run cover
         npm run lint:scripts
     - name: Running on https
-      run: 
-        sudo apt-get install authbind
-        sudo touch /etc/authbind/byport/443
-        sudo chmod 500 /etc/authbind/byport/443
-        sudo chown ubuntu /etc/authbind/byport/443
-        cd /home/ubuntu/actions-runner-backend/_work/deployment-ec2-binar-backend/deployment-ec2-binar-backend
+      run: |
+        sudo apt-get install authbind &&
+        sudo touch /etc/authbind/byport/443 &&
+        sudo chmod 500 /etc/authbind/byport/443 &&
+        sudo chown ubuntu /etc/authbind/byport/443 &&
+        cd /home/ubuntu/actions-runner-backend/_work/deployment-ec2-binar-backend/deployment-ec2-binar-backend &&
         authbind node server.js
+
 
 
