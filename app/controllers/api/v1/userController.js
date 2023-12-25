@@ -168,7 +168,7 @@ module.exports = {
   async check (req, res) {
     res.status(200).json({
       status: 'success',
-      message: 'Server is running smoothly.'
+      message: 'Server berjalan dengan baik'
     })
   }
 
