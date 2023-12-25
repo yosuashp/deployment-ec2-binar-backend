@@ -46,11 +46,11 @@ if (process.env.NODE_ENV === 'production') {
   const certificate = fs.readFileSync(process.env.SSL_CERTIFICATE_PATH, 'utf8')
   const credentials = { key: privateKey, cert: certificate }
   server = https.createServer(credentials, app)
-  console.log(`HTTPS Server is running on ${process.env.NODE_ENV} mode at https://localhost:${httpsPort}`)
+  console.log(`HTTPS Server is running on ${process.env.NODE_ENV} mode at https://54.179.159.46:${httpsPort}`)
 } else {
   // Menggunakan HTTP di lingkungan pengembangan
   server = http.createServer(app)
-  console.log(`HTTP Server is running on ${process.env.NODE_ENV} mode at http://localhost:${httpPort}`)
+  console.log(`HTTP Server is running on ${process.env.NODE_ENV} mode at http://54.179.159.46:${httpPort}`)
 }
 
 server.listen(process.env.NODE_ENV === 'production' ? httpsPort : httpPort)
