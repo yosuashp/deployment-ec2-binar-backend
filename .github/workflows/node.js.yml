@@ -25,9 +25,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run:
-    name: Build and Test
-      command: |
+    - name: Build and Test
+      run: |
         touch .env
         echo "${{ secrets.PROD_ENV_FILE }}" > .env
         sudo apt-get -y update
@@ -35,6 +34,3 @@ jobs:
         npm run build:sahat
         npm run cover
         npm run lint:scripts
-
-
-        
