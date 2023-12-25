@@ -34,4 +34,4 @@ jobs:
         npm run build:sahat
         npm run cover
         npm run lint:scripts
-      run: pm2 restart BackendAPI
+    - run: pm2 restart BackendAPI
