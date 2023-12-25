@@ -1,8 +1,8 @@
 'use strict'
 
 const bcrypt = require('bcryptjs')
-const superadmin = require('../../config/superadmin')
-const encryption = require('../../config/encryption')
+const superadmin = require('../config/superadmin')
+const encryption = require('../config/encryption')
 
 // function encryptPassword (password) {
 //   return new Promise((resolve, reject) => {
