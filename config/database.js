@@ -14,22 +14,22 @@ const {
 } = process.env
 
 module.exports = {
-  // development: {
-  //   username: DB_USERNAME,
-  //   password: DB_PASSWORD,
-  //   database: `${DB_NAME}_development`,
-  //   host: DB_HOST,
-  //   dialect: 'postgres',
-  //   logging: DB_LOGGING
-  // },
-  // test: {
-  //   username: DB_USERNAME,
-  //   password: DB_PASSWORD,
-  //   database: `${DB_NAME}_test`,
-  //   host: DB_HOST,
-  //   dialect: 'postgres',
-  //   logging: DB_LOGGING
-  // },
+  development: {
+    username: DB_USERNAME,
+    password: DB_PASSWORD,
+    database: `${DB_NAME}_development`,
+    host: DB_HOST,
+    dialect: 'postgres',
+    logging: DB_LOGGING
+  },
+  test: {
+    username: DB_USERNAME,
+    password: DB_PASSWORD,
+    database: `${DB_NAME}_test`,
+    host: DB_HOST,
+    dialect: 'postgres',
+    logging: DB_LOGGING
+  },
   production: {
     username: DB_USERNAME,
     password: DB_PASSWORD,

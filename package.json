@@ -10,7 +10,8 @@
     "lint:scripts": "eslint --fix --ignore-path .eslintignore \"**/*.{js,json}\"",
     "start": "node server.js",
     "development": "nodemon -q server.js",
-    "build:sahat": "sequelize db:drop && sequelize db:create && sequelize db:migrate && sequelize db:seed:all",
+    "build:sahat": "sequelize db:drop --config config/config.json && sequelize db:create --config config/config.json && sequelize db:migrate --config config/config.json && sequelize db:seed:all --config config/config.json",
+
     "superadmin": "sequelize db:seed:undo && sequelize db:seed:all"
   },
   "nyc": {
