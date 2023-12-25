@@ -15,7 +15,7 @@ require('dotenv').config({ path: envPath })
 const app = express()
 
 app.use(cors({
-  origin: 'https://front-end-binar-yosuas-projects-8e558ba3.vercel.app/'
+  origin: 'https://front-end-binar-yosuas-projects-8e558ba3.vercel.app'
 }))
 
 // create a write stream (in append mode)
